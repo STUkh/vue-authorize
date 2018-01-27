@@ -1,5 +1,4 @@
 import { isFunction, isPromise } from '../utils.js'
-import Promise from '../promise.js'
 
 export default class Permission {
   constructor(name, handler) {
