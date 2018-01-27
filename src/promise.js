@@ -1,8 +1,6 @@
-import Promise from 'promise-polyfill'
-
-Promise.any = function(arrayOfPromises) {
+export const Promise_any = function(arrayOfPromises) {
   if(!arrayOfPromises || !(arrayOfPromises instanceof Array)) {
-    throw new Error('Must pass Promise.any an array')
+    throw new Error('Must pass Promise_any an array')
   }
     
   if(arrayOfPromises.length === 0) {
@@ -45,5 +43,3 @@ Promise.any = function(arrayOfPromises) {
     }
   })
 }
-
-export default Promise

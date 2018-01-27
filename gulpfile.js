@@ -5,11 +5,10 @@ var gulp = require('gulp'),
     history = require('connect-history-api-fallback')
 
 gulp.task('compile', function () {
-  var webpackConfig = require('./example/webpack.config.js')
-  return gulp.src('./example/index.js')
+  var webpackConfig = require('./webpack.config.js')
+  return gulp.src('./src/index.js')
     .pipe(gulpWebpack(webpackConfig, webpack))
-    .pipe(gulp.dest('./example'))
-    .pipe(connect.reload())
+    .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('server', function () {

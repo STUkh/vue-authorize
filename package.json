@@ -2,7 +2,7 @@
   "name": "vue-authorize",
   "version": "1.0.0",
   "description": "Simple Vue.js authorization library",
-  "main": "src/index.js",
+  "main": "dist/vue-authorize.js",
   "scripts": {
     "dev": "gulp dev"
   },

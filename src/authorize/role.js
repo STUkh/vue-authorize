@@ -1,4 +1,4 @@
-import Promise from '../promise.js'
+import { Promise_any } from '../promise.js'
 import { isArray, isPromise } from '../utils.js'
 
 export default class Role {
@@ -34,7 +34,7 @@ export default class Role {
         if (permissionInstances) {
           // Permissions passed to check, run their invocation
           return invokeResult.then(() => {
-            return Promise.any(permissionInstances.map((permissionInstance) => {
+            return Promise_any(permissionInstances.map((permissionInstance) => {
               return permissionInstance.invoke(context || this)
             })).then(() => {
               return Promise.resolve()
@@ -54,7 +54,7 @@ export default class Role {
         if (!!invokeResult) {
           if (permission) {
             if (permissionInstances) {
-              return Promise.any(permissionInstances.map((permissionInstance) => {
+              return Promise_any(permissionInstances.map((permissionInstance) => {
                 return permissionInstance.invoke(context || this)
               })).then(resolve, reject)
             } else {

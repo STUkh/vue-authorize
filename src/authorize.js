@@ -1,4 +1,4 @@
-import Promise from './promise.js'
+import { Promise_any } from './promise.js'
 import { objectExtend, forEach, isString, isFunction, isArray, isObject } from './utils.js'
 import defaultOptions from './options.js'
 import Role from './authorize/role.js'
@@ -118,7 +118,7 @@ export default class VueAuthorize {
         reject()
       }
 
-      return Promise.any(roleInstances.map((roleInstance) => {
+      return Promise_any(roleInstances.map((roleInstance) => {
         return roleInstance.invoke(permission, this)
       })).then(resolve).catch(reject)
     })
