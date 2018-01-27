@@ -1,5 +1,3 @@
-import Vue from 'vue'
-
 /**
  * This directive should serve as a way to 
  * remove DOM elements if user is not auhtorized 
