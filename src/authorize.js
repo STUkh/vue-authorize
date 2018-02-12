@@ -5,7 +5,7 @@ import Role from './authorize/role.js'
 import Permission from './authorize/permission.js'
 
 export default class VueAuthorize {
-  constructor($auth, overrideOptions) {
+  constructor(overrideOptions) {
     let options = objectExtend({}, defaultOptions)
     options = objectExtend(options, overrideOptions)
 
@@ -28,12 +28,6 @@ export default class VueAuthorize {
       permissions: {
         get() {
           return permissions_
-        }
-      },
-
-      $auth: {
-        get() {
-          return $auth
         }
       }
     })
