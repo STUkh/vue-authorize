@@ -1,6 +1,6 @@
 {
   "name": "vue-authorize",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple Vue.js authorization library",
   "main": "dist/vue-authorize.js",
   "scripts": {
@@ -22,9 +22,6 @@
     "url": "https://github.com/dgrubelic/vue-authorize.git"
   },
   "license": "MIT",
-  "dependencies": {
-    "vue-authenticate": "^1.0.9"
-  },
   "devDependencies": {
     "axios": "^0.15.3",
     "babel-core": "^6.24.0",
